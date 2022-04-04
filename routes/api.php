@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::post('login','AuthController@login');
 Route::post('register','AuthController@register');
 
+//////////////// home
+Route::get('slider','HomeController@slider');
+Route::get('home','HomeController@home');
 
 Route::fallback(function () {
     return helperJson(null,'URL NOT FOUND!',404);

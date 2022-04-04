@@ -24,6 +24,8 @@ class CreatePostsTable extends Migration
             $table->double('rate')->nullable()->default(0);
             $table->double('price')->nullable()->default(0);
             $table->text('details');
+            $table->enum('type',['move','show'])->nullable()
+                ->default('move');
             $table->timestamps();
         });
     }
