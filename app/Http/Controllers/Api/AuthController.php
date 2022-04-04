@@ -38,7 +38,7 @@ class AuthController extends Controller
             'user_name' => 'required|unique:users',
             'national_id' => 'required|unique:users',
             'email' => 'required|unique:users',
-            'gender' => 'required|in:male,female',
+            'gender' => 'nullable|in:male,female',
             'type' => 'required|in:customer,owner',
             'password' => 'required',
         ]);
