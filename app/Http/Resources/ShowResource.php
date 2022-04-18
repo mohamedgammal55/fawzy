@@ -23,6 +23,7 @@ class ShowResource extends JsonResource
             'image'=>get_file($this->image),
             'price'=>$this->price,
             'details'=>$this->details,
+            'count_hours'=>floor($this->minutes / 60).'H '.($this->minutes % 60).'M',
             'heroes'=>HeroesResource::collection(PostsHeroes::where('post_id',$this->id)->latest()->get()),
         ];
     }

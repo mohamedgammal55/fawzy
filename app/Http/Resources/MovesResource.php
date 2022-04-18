@@ -25,6 +25,7 @@ class MovesResource extends JsonResource
             'category'=>new CategoryResource(Categories::find($this->category_id)),
             'price'=>$this->price,
             'details'=>$this->details,
+            'count_hours'=>floor($this->minutes / 60).'H '.($this->minutes % 60).'M',
             'heroes'=>HeroesResource::collection(PostsHeroes::where('post_id',$this->id)->latest()->get()),
 
         ];

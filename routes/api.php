@@ -21,6 +21,10 @@ Route::post('register','AuthController@register');
 Route::get('slider','HomeController@slider');
 Route::get('home','HomeController@home');
 
+/////////////// posts
+Route::get('posts/{type}','PostController@posts');
+Route::get('onePost','PostController@onePost');
+
 Route::fallback(function () {
     return helperJson(null,'URL NOT FOUND!',404);
 });

@@ -25,6 +25,6 @@ class HomeController extends Controller
             'shows'=>ShowResource::collection($shows),
             'soon'=>ComingSoonResource::collection($soon),
             'slider'=>SliderResource::collection($slider)
-            , 'message' => 'success','code'=>200],200);
+            , 'message' => 'done','code'=>200],200);
     }
 }//end class
